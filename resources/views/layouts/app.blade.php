@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Lim Hua Heart Centre') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,13 +18,27 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+
+     <!--CSS links-->
+     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <style>
+        .dataTables_wrapper .dataTables_paginate .paginate_button{
+            padding: 0px !important;
+            margin:0px !important;
+        }
+        div.dataTables_wrapper div.dataTables_length select{
+            width:50% !important;
+        }
+    </style>
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" >
+                <img src="/uploads/others/logo.png" alt="logo" style="width:67px;height:35px;"> {{ config('Lim Hua Heart Centre ', 'Lim Hua Heart Centre 林华医院') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -79,7 +93,19 @@
             @yield('content')
         </main>
     </div>
+   
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--imports Google CDN or microsoft also can-->
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" ></script>
+    <script src="{{ asset('assets/js/scripts.js') }}" ></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myDataTable').DataTable();
+        });
+    </script>
 
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" defer></script>
+     
 </body>
 </html>

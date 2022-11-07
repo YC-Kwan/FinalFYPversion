@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\bookingHistory;
 use App\Models\patientReport;
 
+
 use App\Http\Requests\Patient\BookingHistoryFormRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,12 +36,14 @@ class BookingHistoryController extends Controller
         $doctorcategory = doctorcategory::where('doctorName', '=',$data['doctorName'])->where('availableDate','=',$data['bookingDate'])->where('availableTime','=',$data['bookingTime'])->update(array('doctor_availability' => '0'));
 
         
-        return redirect('user/patientbookapp')->with('message','Booking made successfully!');
+        return redirect('user/myappointment')->with('message','Booking made successfully!');
     }
 
     public function myapp_index()
     {
         $bookingHistory = bookingHistory::where('patientEmail','=',Auth::user()->email)->get();
+        
+
         //$doctorcategory = doctorcategory::where('doctor_availability', '=',1)->where('availableDate','>',$currenttime)->get();
         return view('myappointment' ,compact('bookingHistory'));
     }

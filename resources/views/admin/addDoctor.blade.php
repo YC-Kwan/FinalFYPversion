@@ -25,11 +25,15 @@
 
             <div class= "mb-3">
                 <label for="">Doctor Name</label>
-                <input type="text" name="doctorName" class="form-control">
+                <select name="doctorName" class="form-control">
+                @foreach($doctor_add as $item )
+                <option value="{{$item->name}}">{{$item->name}}</option>
+                @endforeach
+                </select>
             </div>
 
             <div class= "mb-3">
-                <label for="">Proffesion Description</label>
+                <label for="">Profession Description</label>
                 <textarea name="doctordescription" rows='5' class="form-control"></textarea>
             </div>
 

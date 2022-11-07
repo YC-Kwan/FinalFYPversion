@@ -62,14 +62,13 @@
               <tbody>
 
                     @foreach($doctorcategory as $item )
-
                     <tr>
                          <td>{{$item->exDoctorID}}</td>
                          <td>{{$item->gender}}</td>
                          <td>{{$item->phone}}</td>
                          <td>{{$item->doctorName}}</td>
                          <td>{{$item->doctordescription}}</td>
-                         <td><img src="{{ asset('uploads/doctorcategory/'.$item->Specialist) }}"  width = "100px" height="100px" alt="pdf" ></td>
+                         <td><img src="{{ asset('uploads/doctorcategory/'.$item->certificate) }}"  width = "100px" height="100px" alt="img" ></td>
                          <!--<td>{{$item->role_as == '1' ? 'Admin' : 'User'}}</td> -->
                          <td>{{$item->Specialist}}</td>
                          <td> 

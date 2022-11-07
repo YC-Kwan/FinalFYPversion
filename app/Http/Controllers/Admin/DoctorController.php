@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\DoctorFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class DoctorController extends Controller
 {
@@ -26,8 +27,8 @@ class DoctorController extends Controller
 
     //create
     public function create(){
-
-        return view('admin.addDoctor');
+        $doctor_add = User::where('isban','=',0)->where('role_as','=',2)->get();
+        return view('admin.addDoctor', compact('doctor_add'));
     }
 
 
