@@ -17,8 +17,8 @@
                </div>
                <div class="modal-body">
                     <input type="hidden" name="doctor_delete_id" id="user_id">
-               <h5>Are you sure do you want to delete this doctor?</h5>
-               </div>
+               <h5>Are you sure do you want to delete this booking time slot?</h5>
+               </div> 
                <div class="modal-footer">
                <button type="submit" class="btn btn-danger">Yes, Delete</button>
                </div>

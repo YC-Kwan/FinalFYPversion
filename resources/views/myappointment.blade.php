@@ -44,7 +44,7 @@
 
     <div class="card mt-4">
          <div class="card-header">
-               <h4>My appointments</h4>
+               <h4>My appointments （Note: You are required to not eat anything 6 hours before the reservation!)</h4>
          </div>
          <div class="card-body">
 

@@ -60,6 +60,7 @@
                     <th>Patient booking time</th>
                     <th>Booking venue</th>
                     <th>Report result</th>
+                    <th>Doctor</th>
                     <th>View</th>
                     <th>Download</th>
                     
@@ -80,6 +81,7 @@
                      <td>{{$item->bookingTime}}</td>
                      <td>{{$item->venue}}</td>
                      <td>{{$item->reportpdf}}</td>
+                     <td>{{$item->uploader}}</td>
                      <td><a href="{{url('user/view/'.$item->patientreportID)}}" class="btn btn-info">View</a></td>
                      <td><a href="{{url('user/download/'.$item->reportpdf)}}" class="btn btn-info">Downlaod</a></td>
                      <!--<td><a href="{{url('user/view/'.$item->patientreportID)}}">View</a></td>

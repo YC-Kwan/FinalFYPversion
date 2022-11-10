@@ -46,7 +46,7 @@
 
             <div class= "mb-3">
                 <label for="">Doctor Availability	</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
+                
                 <select name="doctor_availability" class="form-control">
                 <option value="0">Not Available</option>
                 <option value="1">Female</option>
@@ -55,7 +55,7 @@
 
             <div class= "mb-3">
                 <label for="">Venue</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
+                
                 <select name="status" class="form-control">
                 <option value="A">Block A101</option>
                 <option value="B">Block B101</option>

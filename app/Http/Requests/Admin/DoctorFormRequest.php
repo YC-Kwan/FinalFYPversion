@@ -53,8 +53,7 @@ class DoctorFormRequest extends FormRequest
 
             'certificate' => [
                 'required',
-                //'mimes:pdf',
-               // 'max:10000',
+                'mimes:jpeg,jpg,png'
                 
             ],
             'Specialist' => [
@@ -63,6 +62,7 @@ class DoctorFormRequest extends FormRequest
 
             'image_profile' => [
                 'required',
+                'mimes:jpeg,jpg,png'
             ],
 
             'availableDate' => [
